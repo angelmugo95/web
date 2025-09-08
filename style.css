@@ -1,0 +1,93 @@
+:root {
+  --brand-navy: #001653;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Background for hero */
+#home {
+  background: url('images/background.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 15, 40, 0.6);
+}
+
+#home>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 2.5rem !important;
+  /* text-5xl */
+  font-weight: 800 !important;
+  text-align: center !important;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Tags */
+.tag {
+  @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-500 dark:bg-blue-500/30 dark:text-blue-200;
+}
+
+/* Project cards */
+.project-card {
+  @apply bg-white dark:bg-gray-500 rounded-xl shadow-sm overflow-hidden border border-gray-100 dark:border-gray-500 transition-transform hover:-translate-y-1 hover:shadow-md;
+}
+
+.project-image {
+  @apply w-full h-40 object-cover;
+}
+
+/* Experience bullets */
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  margin-right: 8px;
+  background: var(--brand-navy);
+}
+
+.check {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  line-height: 18px;
+  text-align: center;
+  background: #e6eefc;
+  color: var(--brand-navy);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* Technical & Soft Skills bullets */
+#skills ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.6;
+}
+
+#skills ul li span.check {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+#skills ul li strong {
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
